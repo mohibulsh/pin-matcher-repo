@@ -5,13 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>pin Generator</title>
+
+    <link rel="stylesheet" href="styles/style.css">
     <!-- tailwind link css -->
      <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
    <main class="bg-slate-900 w-full h-screen ">
        <div class=" w-1/2 mx-auto grid grid-cols-2 gap-8 pt-8 text-center">
-          
+          <!-- pin generate start -->
         <div class="bg-gray-800 py-12 rounded">
             <input id="pin-field" type="text" class="w-9/12 bg-gray-600  py-2 rounded px-2 text-white font-bold text-2xl">
             <button id="pin-btn" class="w-44 h-44 bg-gray-600 my-28 hover:border-cyan-500 border-cyan-600 bg-sky-700 hover:bg-sky-800 rounded-full border-8 text-2xl font-bold text-white">
@@ -19,7 +21,7 @@
             </button>
 
         </div>
-
+       <!-- calculate start -->
         <div class="bg-gray-800 py-12 rounded">
             <input id="calculate-field" type="text" class="w-9/12 bg-gray-600  py-2 rounded px-2 text-white font-bold text-2xl">
           
@@ -38,10 +40,24 @@
                 <div class="px-3 py-4 rounded-xl text-white font-bold text-2xl bg-gray-500 ">C</div>
             </div>
 
+         <!-- calculate submit button -->
+         <input id="pin-matched-submit" type="submit" class="w-7/12 bg-cyan-600 hover:bg-cyan-400 mt-6 py-2 rounded px-2 text-white font-bold text-2xl">
+
         </div>
 
        </div>
+
+       <!-- screct massage -->
+      <div class="pt-8 w-1/2 mx-auto">
+        <div id="matched-success" class="bg-gray-800 rounded-xl p-2 w-1/2 mx-auto text-center none "> 
+            <h1 class="text-white font-semibold text-xl">Pin Matched... Secret door is opening for you</h1>
+          </div>
+        <div id="matched-unsuccess" class="bg-gray-800 rounded-xl p-2 w-1/2 mx-auto text-center mt-2  "> 
+            <h1 class="text-white font-semibold text-xl">Pin Didn't Match, Please try again</h1>
+          </div>
+      </div>
    </main>
+ 
     
 
    <!-- javascript link -->

@@ -49,3 +49,21 @@ document.getElementById('inpt-text-btn').addEventListener('click',function(event
 })
 
 // submit button
+
+document.getElementById('pin-matched-submit').addEventListener('click',function(){
+        const pinField = document.getElementById('pin-field');
+        const getDisplayPin = pinField.value;
+
+        const calculateField = document.getElementById('calculate-field');
+        const calculateVale = calculateField.value;
+        const matchedUnSuccess = document.getElementById('matched-unsuccess');
+        const matchedSuccess = document.getElementById('matched-success');
+        
+        if(getDisplayPin === calculateVale ){
+            matchedSuccess.style.display ='block';
+            matchedUnSuccess.style.display ='none';
+        } else{
+            matchedUnSuccess.style.display ='block';
+            matchedSuccess.style.display ='none';  
+        }
+})
